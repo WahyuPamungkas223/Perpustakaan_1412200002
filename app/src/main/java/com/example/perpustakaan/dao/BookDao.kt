@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface BookDao {
-    @Query("SELECT * FROM `book_table`ORDER BY name ASC")
+    @Query("SELECT * FROM `book_table`ORDER BY book_name ASC")
     fun getAllBook(): Flow<List<Book>>
 
     @Insert

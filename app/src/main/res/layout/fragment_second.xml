@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    tools:context=".UI.SecondFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -12,7 +12,7 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/booktextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -22,46 +22,86 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/nameeditTextText"
+            android:id="@+id/booknameeditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:ems="10"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintStart_toStartOf="@+id/booktextView"
+            app:layout_constraintTop_toBottomOf="@+id/booktextView" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/genretextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Jenis Buku"
-            app:layout_constraintEnd_toEndOf="@+id/nameeditTextText"
-            app:layout_constraintStart_toStartOf="@+id/nameeditTextText"
-            app:layout_constraintTop_toBottomOf="@+id/nameeditTextText" />
+            app:layout_constraintEnd_toEndOf="@+id/booknameeditText"
+            app:layout_constraintStart_toStartOf="@+id/booknameeditText"
+            app:layout_constraintTop_toBottomOf="@+id/booknameeditText" />
 
         <EditText
-            android:id="@+id/genreeditTextText"
+            android:id="@+id/genreeditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            app:layout_constraintEnd_toEndOf="@+id/textView3"
-            app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintEnd_toEndOf="@+id/genretextView"
+            app:layout_constraintStart_toStartOf="@+id/genretextView"
+            app:layout_constraintTop_toBottomOf="@+id/genretextView" />
 
-        <Button
-            android:id="@+id/saveButton"
-            android:layout_width="104dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/save"
+        <TextView
+            android:id="@+id/borrowertextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Nama Peminjam"
+            app:layout_constraintEnd_toEndOf="@+id/genreeditText"
+            app:layout_constraintStart_toStartOf="@+id/genreeditText"
+            app:layout_constraintTop_toBottomOf="@+id/genreeditText" />
+
+        <EditText
+            android:id="@+id/borrowereditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/borrowertextView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/borrowertextView"
+            app:layout_constraintTop_toBottomOf="@+id/borrowertextView" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="@+id/genreeditTextText"
-            app:layout_constraintTop_toBottomOf="@+id/genreeditTextText" />
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="@+id/genreeditText"
+            app:layout_constraintTop_toBottomOf="@+id/borrowereditText">
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:visibility="gone"
+                android:text="Hapus" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="104dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="@string/save" />
+
+
+
+        </LinearLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

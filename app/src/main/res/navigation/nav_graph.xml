@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.perpustakaan.FirstFragment"
+        android:name="com.example.perpustakaan.UI.FirstFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_first">
 
@@ -17,12 +17,16 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.example.perpustakaan.SecondFragment"
+        android:name="com.example.perpustakaan.UI.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <argument
+            android:name="book"
+            app:argType="com.example.perpustakaan.model.Book"
+            app:nullable="true"/>
     </fragment>
 </navigation>

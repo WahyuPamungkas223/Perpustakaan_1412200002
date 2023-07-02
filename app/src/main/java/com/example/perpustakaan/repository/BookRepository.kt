@@ -1,21 +1,22 @@
 package com.example.perpustakaan.repository
 
+import com.example.perpustakaan.application.BookDatabase
 import com.example.perpustakaan.dao.BookDao
 import com.example.perpustakaan.model.Book
 import kotlinx.coroutines.flow.Flow
 
-class BookRepository(private val BookDao: BookDao) {
-    val allBook: Flow<List<Book>> = BookDao.getAllBook()
+class BookRepository(private val bookDao: BookDao) {
+    val allBook: Flow<List<Book>> = bookDao.getAllBook()
 
     suspend fun insertBook(book: Book) {
-        BookDao.insertBook(book)
+        bookDao.insertBook(book)
     }
 
     suspend fun deleteBook(book: Book) {
-        BookDao.deleteBook(book)
+        bookDao.deleteBook(book)
     }
 
     suspend fun updateBook(book: Book) {
-        BookDao.updateBook(book)
+        bookDao.updateBook(book)
     }
 }

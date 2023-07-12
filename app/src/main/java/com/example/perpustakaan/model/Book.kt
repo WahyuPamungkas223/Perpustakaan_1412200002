@@ -13,5 +13,7 @@ data class Book(
     val id: Int = 0,
     val book_name:  String,
     val book_genre: String,
-    val borrower_name: String
+    val borrower_name: String,
+    val latitude: Double?,
+    val longitude: Double?
 ) : Parcelable

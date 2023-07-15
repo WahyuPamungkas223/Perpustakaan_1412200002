@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/drifterrsimageView"
+            android:layout_width="155dp"
+            android:layout_height="226dp"
+            android:layout_marginTop="44dp"
+            android:src="@drawable/ic_drifters"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.132"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/gateimageView"
+            android:layout_width="155dp"
+            android:layout_height="226dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="44dp"
+            android:src="@drawable/ic_gate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.021"
+            app:layout_constraintStart_toEndOf="@+id/drifterrsimageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/konohaimageView"
+            android:layout_width="155dp"
+            android:layout_height="226dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_kg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.132"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drifterrsimageView" />
+
+        <ImageView
+            android:id="@+id/konosubaimageView"
+            android:layout_width="155dp"
+            android:layout_height="219dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="224dp"
+            android:src="@drawable/ic_konosuba"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.021"
+            app:layout_constraintStart_toEndOf="@+id/konohaimageView"
+            app:layout_constraintTop_toBottomOf="@+id/gateimageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

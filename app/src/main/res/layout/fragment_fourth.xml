@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FourthFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/LeaderimageView"
+            android:layout_width="215dp"
+            android:layout_height="318dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_ketua"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/TreasurerimageView"
+            android:layout_width="215dp"
+            android:layout_height="318dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_bendahara"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LeaderimageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

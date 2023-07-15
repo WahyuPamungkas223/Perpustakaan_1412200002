@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.perpustakaan.R
@@ -27,6 +28,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.material.button.MaterialButton
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -34,6 +36,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 class SecondFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerDragListener {
 
     private var _binding: FragmentSecondBinding? = null
+
     private val binding get() = _binding!!
     private lateinit var applicationContext: Context
     private val BookViewModel: BookViewModel by viewModels{
@@ -105,6 +108,7 @@ class SecondFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerDragLis
             book?.let { it1 -> BookViewModel.delete(it1) }
             findNavController().popBackStack()
         }
+
     }
 
     override fun onDestroyView() {
@@ -178,4 +182,6 @@ class SecondFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerDragLis
                 }
             }
     }
+
+
 }

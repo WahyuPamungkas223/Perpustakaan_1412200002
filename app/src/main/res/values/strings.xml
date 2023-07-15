@@ -4,6 +4,9 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Tambah Buku Perpustakaan</string>
+    <string name="third_fragment_label">Katalog Buku</string>
+    <string name="fourth_fragment_label">Pengurus Perpustakaan</string>
+    <string name="fifth_fragment_label">About Programmer</string>
     <string name="next">Next</string>
     <string name="save">Simpan</string>
 

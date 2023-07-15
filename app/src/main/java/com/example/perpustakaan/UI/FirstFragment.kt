@@ -7,12 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.perpustakaan.R
 import com.example.perpustakaan.application.BookApp
 import com.example.perpustakaan.databinding.FragmentFirstBinding
-import com.example.perpustakaan.model.Book
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -62,10 +62,24 @@ class FirstFragment : Fragment() {
             }
         }
 
+        binding.CatButton.setOnClickListener {
+            val action = FirstFragmentDirections.actionFirstFragmentToThirdFragment()
+            findNavController().navigate(action)
+        }
+
         binding.addFAB.setOnClickListener {
            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(null)
            findNavController().navigate(action)
        }
+
+       binding.MemberButton.setOnClickListener {
+           findNavController().navigate(R.id.action_FirstFragment_to_FourthFragment)
+       }
+
+        binding.ProgrammerButton.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_fifthFragment)
+        }
+
     }
 
     override fun onDestroyView() {
